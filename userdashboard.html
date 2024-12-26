@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>User Dashboard</title>
+  <style>
+    .text-pink-500 {
+      color: #f50057;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  </style>
+  <script>
+    function startCountdown(id, hoursToAdd, minutesToAdd, secondsToAdd) {
+      const countdownElement = document.getElementById(id);
+      const endTime = new Date();
+      endTime.setHours(endTime.getHours() + hoursToAdd, endTime.getMinutes() + minutesToAdd, endTime.getSeconds() + secondsToAdd);
+    
+      function updateCountdown() {
+        const now = new Date();
+        const difference = endTime - now;
+    
+        if (difference > 0) {
+          const seconds = Math.floor((difference / 1000) % 60);
+          const minutes = Math.floor((difference / 1000 / 60) % 60);
+          const hours = Math.floor((difference / 1000 / 60 / 60) % 24);
+          const days = Math.floor(difference / 1000 / 60 / 60 / 24);
+          countdownElement.textContent = `${days}d : ${hours}h : ${minutes}m : ${seconds}s`;
+    
+        } else {
+          countdownElement.textContent = "Time's up!";
+          clearInterval(interval);
+        }
+      }
+    
+      updateCountdown(); // Initialize the countdown immediately
+      const interval = setInterval(updateCountdown, 1000); // Update every second
+    }
+    
+    // Initialize multiple countdowns
+    window.onload = function () {
+      startCountdown("countdown1", 9, 10, 38); // First card
+      startCountdown("countdown2", 8, 45, 20); // Second card
+    
+    };
+    
+      </script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Container -->
+  <div class="flex flex-col lg:flex-row lg:space-x-6 p-6">
+
+    <!-- Sidebar -->
+    <aside class="bg-white w-full lg:w-1/4 rounded-lg shadow-md p-6 mb-6 lg:mb-0">
+        <div class="text-center">
+          <img src="icons/user-img.png" alt="User Avatar" class="rounded-full mx-auto w-24 h-24">
+          <h3 class="text-xl font-semibold mt-4">Ragavan</h3>
+          <p class="text-gray-600">ragavan@gmail.com</p>
+        </div>
+        <nav class="mt-6 space-y-4">
+          <a href="user-dash/dashboard.html" class="flex items-center text-gray-700 hover:text-purple-600 transition">
+            <span class="material-icons mr-2"></span> Dashboard
+          </a>
+          <a href="user-dash/profile.html" class="flex items-center text-gray-700 hover:text-purple-600 transition">
+            <span class="material-icons mr-2"></span> Personal Profile
+          </a>
+          <a href="user-dash/my-bids.html" class="flex items-center text-gray-700 hover:text-purple-600 transition">
+            <span class="material-icons mr-2"></span> My Bids
+          </a>
+          <a href="user-dash/winning-bids.html" class="flex items-center text-purple-600 bg-purple-100 rounded-lg p-2">
+            <span class="material-icons mr-2"></span> Winning Bids
+          </a>
+          <a href="user-dash/alerts.html" class="flex items-center text-gray-700 hover:text-purple-600 transition">
+            <span class="material-icons mr-2"></span> My Alerts
+          </a>
+          <a href="user-dash/favorites.html" class="flex items-center text-gray-700 hover:text-purple-600 transition">
+            <span class="material-icons mr-2"></span> My Favorites
+          </a>
+          <a href="user-dash/refferrals.html" class="flex items-center text-gray-700 hover:text-purple-600 transition">
+            <span class="material-icons mr-2"></span> Referrals
+          </a>
+        </nav>
+      </aside>
+      
+
+    <!-- Main Content -->
+    <main class="w-full lg:w-3/4">
+      <header class="bg-white rounded-lg shadow-md p-6 flex flex-wrap items-center justify-between mb-6">
+        <h2 class="text-xl font-semibold text-gray-800">Winning Bids</h2>
+        <div class="flex items-center space-x-4">
+          <input type="text" placeholder="Item Name" class="px-4 py-2 border rounded-lg focus:outline-none">
+          <select class="px-4 py-2 border rounded-lg focus:outline-none">
+            <option>All</option>
+            <option>Newest</option>
+            <option>Highest Bid</option>
+          </select>
+        </div>
+      </header>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="relative">
+              <img src="images/Card/carone.jpg" alt="Car Image" class="w-full h-48 object-cover">
+              <button class="absolute top-3 right-3 text-[#ffa500] text-lg">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+              <button class="absolute bottom-3 right-3 bg-white p-2 rounded-full shadow-md text-[#ffa500]">
+                <img src="icons/bid.png" class="w-4" alt="bid icon">
+              </button>
+            </div>
+            <div class="p-4">
+              <h2 class="text-xl font-semibold text-gray-800">Lamborghini</h2>
+              <div class="border-t border-gray-200 mt-2 mb-4"></div>
+              <div class="flex justify-between items-center text-sm">
+                <div class="flex items-center text-green-500">
+                  <i class="fas fa-gavel mr-1"></i>
+                  <span>Current Bid</span>
+                </div>
+                <div class="text-gray-800 font-semibold">₹100.00</div>
+              </div>
+              <div class="flex justify-between items-center text-sm mt-2">
+                <div class="flex items-center text-red-500">
+                  <i class="fas fa-shopping-bag mr-1"></i>
+                  <span>Buy Now</span>
+                </div>
+                <div class="text-gray-800 font-semibold">₹500.00</div>
+              </div>
+              <div class="flex justify-between items-center text-sm mt-4">
+                <div class="text-pink-500 text-sm">
+                  <span id="countdown1">Loading...</span>
+                </div>
+                <div class="text-green-500 font-semibold">30 Bids</div>
+              </div>
+              <button class="mt-4 w-full py-2 bg-[#ffa500] text-white font-semibold rounded-lg shadow-md hover:shadow-lg">
+                Submit A Bid
+              </button>
+            </div>
+          </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="relative">
+              <img src="images/Card/carone.jpg" alt="Car Image" class="w-full h-48 object-cover">
+              <button class="absolute top-3 right-3 text-[#ffa500] text-lg">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+              <button class="absolute bottom-3 right-3 bg-white p-2 rounded-full shadow-md text-[#ffa500]">
+                <img src="icons/bid.png" class="w-4" alt="bid icon">
+              </button>
+            </div>
+            <div class="p-4">
+              <h2 class="text-xl font-semibold text-gray-800">Lamborghini</h2>
+              <div class="border-t border-gray-200 mt-2 mb-4"></div>
+              <div class="flex justify-between items-center text-sm">
+                <div class="flex items-center text-green-500">
+                  <i class="fas fa-gavel mr-1"></i>
+                  <span>Current Bid</span>
+                </div>
+                <div class="text-gray-800 font-semibold">₹100.00</div>
+              </div>
+              <div class="flex justify-between items-center text-sm mt-2">
+                <div class="flex items-center text-red-500">
+                  <i class="fas fa-shopping-bag mr-1"></i>
+                  <span>Buy Now</span>
+                </div>
+                <div class="text-gray-800 font-semibold">₹500.00</div>
+              </div>
+              <div class="flex justify-between items-center text-sm mt-4">
+                <div class="text-pink-500 text-sm">
+                  <span id="countdown2">Loading...</span>
+                </div>
+                <div class="text-green-500 font-semibold">30 Bids</div>
+              </div>
+              <button class="mt-4 w-full py-2 bg-[#ffa500] text-white font-semibold rounded-lg shadow-md hover:shadow-lg">
+                Submit A Bid
+              </button>
+            </div>
+          </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

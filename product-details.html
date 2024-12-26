@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Fixed navbar -->
+
+    <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-800 w-full fixed top-0 z-[1000]">
+        <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
+            <a href="#" class="flex items-center">
+                <img src="../icons/bid-icon.png" class="h-6 mr-3 sm:h-9" alt="Landwind Logo">
+                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-[#ffa500] font-extrabold">AUCTION</span>
+            </a>
+            <div class="flex items-center lg:order-2">
+                <div class="hidden mt-2 mr-4 sm:inline-block">
+                    <span></span>
+                </div>
+                <!-- login button  -->
+                <a href="../registration.html"
+                    class="text-white bg-[#ffa500] hover:bg-[#ffa500] focus:ring-4 focus:ring-[#ffa500] font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-[#ffa500] dark:hover:bg-[#ffa500] focus:outline-none dark:focus:ring-[#ffa500]">
+                    Login
+                </a>
+      
+      
+                <!-- user dashboard  -->
+                <a href="user-dash/dashboard.html" class="inline-flex px-4 py-1 mb-2 me-10 hidden">
+                  <img src="../icons/user-img.png" class="w-8 h-8 cursor-pointer" alt="">
+              </a>
+      
+      
+      
+                <button type="button" onclick="toggleBtn()"
+                    class="inline-flex items-center p-2 ml-1 text-sm text-[#ffa500] rounded-lg lg:hidden hover:bg-[#ffa500] focus:outline-none focus:ring-2 focus:ring-[#ffa500] dark:text-[#ffa500] dark:hover:bg-white dark:focus:ring-white" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center hidden justify-between w-full lg:flex lg:w-auto lg:order-1" id="opensidebar">
+                <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                    <li>
+                        <a href="../index.html"
+                            class="block py-2 pl-3 pr-4 text-white bg-[#ffa500] rounded lg:bg-transparent lg:[#ffa500] lg:p-0 dark:text-white"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-[#ffa500] lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-[#ffa500] dark:hover:text-white lg:dark:hover:bg-transparent">Bidding</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-[#ffa500] lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-[#ffa500] dark:hover:text-white lg:dark:hover:bg-transparent">Seller</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </nav>
+    
+    <div id="sidebar" class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg
+    transform -translate-x-full transition-transform z-[1000] sm:hidden">
+        
+        <div class="flex items-center p-5">
+            <a href="#"><img class="w-9 rounded-full" src="../icons/bid.png" alt="Logo"></a>
+            <h2 class="font-extrabold font-roboto text-2xl text-[#ffa500]">AUCTION</h2>
+        </div>
+        <ul class="p-4 space-y-4">
+            <li>
+                <a href="../index.html" class="block text-gray-600 hover:text-[#ffa500] font-roboto">Home</a>
+            </li>
+            <li>
+                <a href="#" class="block text-gray-600 hover:text-[#ffa500] font-roboto">About</a>
+                <li>
+                    <a href="#" class="block text-gray-600 hover:text-[#ffa500] font-roboto">Bidding</a>
+                </li>
+                <li>
+                    <a href="#" class="block text-gray-600 hover:text-[#ffa500] font-roboto">Seller</a>
+                </li>
+                <li>                            
+                    <a href="../login.html" 
+                    class="block text-gray-600 hover:text-[#ffa500] font-roboto inline-flex">
+                    Login
+                </a>
+  
+                </li>
+            </li>
+        </ul>
+    </div>
+
+<!-- container  -->
+
+    <div class="container mx-auto p-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-20">
+            
+            <div class="max-w-full">
+                <div class="relative overflow-hidden bg-white shadow-lg rounded-lg p-6">
+                    <ul class="slider-list flex transition-transform duration-700 ease-in-out justify-center items-center item" id="slider">
+                        <li class="flex justify-center items-center w-full">
+                            <img class="w-[460px] object-cover rounded-lg" src="images/Card/car.jpeg" alt="Car image 1">
+                        </li>
+                       
+                    </ul>
+                    <!-- Slider Controls -->
+                    <button onclick="previous()" class="absolute top-1/2 -left-4 transform -translate-y-1/2 bg-gray-100 rounded-full p-3 shadow-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                        </svg>
+                    </button>
+                    <button onclick="next()" class="absolute top-1/2 -right-4 transform -translate-y-1/2 bg-gray-100 rounded-full p-3 shadow-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+    
+            <!-- Auction Timer Card -->
+            <div class="max-w-full">
+                <div class="bg-[#ffa500] shadow-xl rounded-lg p-6">
+                    <h1 class="text-center text-2xl font-extrabold font-roboto text-white mb-4">The Breeze Zodiac IX</h1>
+                    <div class="flex justify-between items-center text-white mb-4">
+                        <h2 class="font-bold font-roboto">Item ID: 7300-3356789</h2>
+                        <div class="flex space-x-2">
+                            <div>
+                                <h3 class="font-bold text-xl font-roboto">MRP</h3>
+                                <p class="font-extrabold">₹ 9.9 L</p>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-xl font-roboto">Buy Now</h3>
+                                <p class="font-extrabold">₹ 7.5 L</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 text-center">
+                        <h2 class="text-red-700 font-bold text-2xl font-roboto">Auction Ends In:</h2>
+                        <p id="countdown1" class="text-xl font-bold">Loading...</p>
+                        <div class="mt-4 flex justify-around text-gray-700 space-x-4">
+                            <div>
+                                <p class="font-bold font-roboto md:text-2xl">Active Bidders:</p>
+                                <span id="activeBidders" class=" md:text-2xl">0</span>
+                            </div>
+                            <div>
+                                <p class="font-bold font-roboto md:text-2xl">Bid Count:</p>
+                                <span id="watching"class=" md:text-2xl" >0</span>
+                            </div>
+                            <div>
+                                <p class="font-bold font-roboto md:text-2xl">Total Bids:</p>
+                                <span id="totalBids" class=" md:text-2xl">0</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-center mt-4">
+                            <input type="number" id="bid-text" placeholder="Enter your bid (₹)" class="border-2 border-gray-300 rounded-lg px-4 py-2 w-2/3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <button class="ml-2 px-4 py-2 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700">Bid Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="max-w-full p-2">
+        <div class="bg-green-200 shadow-lg rounded-lg p-6 m-4">
+            <div>
+                <h1 class="text-center font-roboto font-bold p-4 text-2xl mt-2">Product Description</h1>
+            </div> 
+            <div class=" justify-right items-end font-roboto p-3 ">
+                <p>Many of the latest Lexus SUV models are driven by a Self-Charging Hybrid engine that seamlessly combines petrol and electric power. This means the vehicle charges itself as you drive, providing an interrupted journey without the need to plug into a power source. Electric and plug-in SUVs are also available in the range.</p>
+            </div>
+           
+        </div>
+    </div>
+      <!-- footer -->
+  <footer class=" bg-gray-800 shadow-xl w-full p-4">
+    
+    
+    <ul class="hidden sm:flex flex-wrap justify-center space-x-8 text-white font-roboto text-sm sm:text-base">
+        <li><a href="#" class="hover:text-[#ffa500]">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-[#ffa500]">Pricing</a></li>
+        <li><a href="#" class="hover:text-[#ffa500]">Enquire</a></li>
+        <li><a href="#" class="hover:text-[#ffa500]">Contact Us</a></li>
+        <li><a href="#" class="hover:text-[#ffa500]">Products</a></li>
+        <li><a href="#" class="hover:text-[#ffa500]">Bidding</a></li>
+    </ul>
+  
+    <ul class="lg:hidden grid grid-cols-3 text-white text-xs place-items-center gap-2 space-x-8">
+     <div> <li><a href="#" class="hover:text-[#ffa500]">Privacy Policy</a></li>
+         <li><a href="#" class="hover:text-[#ffa500]">Pricing Details</a></li>
+     </div>
+     <div><li><a href="#" class="hover:text-[#ffa500]">Enquire</a></li>
+         <li><a href="#" class="hover:text-[#ffa500]">Contact Us</a></li>
+     </div>
+     <div><li><a href="#" class="hover:text-[#ffa500]">Products</a></li>
+         <li><a href="#" class="hover:text-[#ffa500]">Bidding</a></li>
+     </div> 
+  </ul> 
+    <div class="flex justify-center mt-4 text-gray-200 text-xs sm:text-sm">
+        <p class="font-roboto font-bold">All rights reserved &copy; 2024 </p>
+    </div>
+  </footer>
+   
+<script>
+    // Countdown Timer
+function startCountdown(id, hoursToAdd, minutesToAdd, secondsToAdd) {
+    const countdownElement = document.getElementById(id);
+    const endTime = new Date();
+    endTime.setHours(endTime.getHours() + hoursToAdd, endTime.getMinutes() + minutesToAdd, endTime.getSeconds() + secondsToAdd);
+
+    function updateCountdown() {
+        const now = new Date();
+        const difference = endTime - now;
+
+        if (difference > 0) {
+            const seconds = Math.floor((difference / 1000) % 60);
+            const minutes = Math.floor((difference / 1000 / 60) % 60);
+            const hours = Math.floor((difference / 1000 / 60 / 60) % 24);
+            const days = Math.floor(difference / 1000 / 60 / 60 / 24);
+            countdownElement.textContent = `${days}d : ${hours}h : ${minutes}m : ${seconds}s`;
+        } else {
+            countdownElement.textContent = "Time's up!";
+            clearInterval(interval);
+        }
+    }
+
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 1000);
+}
+
+window.onload = function () {
+    startCountdown("countdown1", 9, 10, 38);
+};
+
+// Bidders and Stats Simulation
+const activeBiddersSpan = document.getElementById("activeBidders");
+const watchingSpan = document.getElementById("watching");
+const totalBidsSpan = document.getElementById("totalBids");
+
+let activeBidders = 0;
+let watching = 0;
+let totalBids = 0;
+
+function updateCounts() {
+    activeBiddersSpan.textContent = activeBidders;
+    watchingSpan.textContent = watching;
+    totalBidsSpan.textContent = totalBids;
+}
+
+function simulateActivity() {
+    activeBidders += Math.floor(Math.random() * 3);
+    watching += Math.floor(Math.random() * 5);
+    totalBids += Math.floor(Math.random() * 10);
+    updateCounts();
+}
+
+setInterval(simulateActivity, 2000);
+updateCounts();
+
+ 
+
+</script>    
+    
+</body>
+</html>

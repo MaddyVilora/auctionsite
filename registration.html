@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen flex justify-center items-center">
+  <div class="w-full max-w-[40rem] mt-14 bg-white p-9 rounded-lg shadow-lg">
+    <!-- Title section -->
+    <div class="text-2xl justify-center text-center font-semibold relative mb-4 mt-6">
+      Register Form
+      <span class="absolute bottom-0 left-0 h-1 w-8 rounded">
+        
+      </span>
+    </div>
+
+    <!-- Registration form -->
+    <form action="#">
+      <div class="ml-[-10px] mx-2 mt-6">
+         <div class="md:flex">
+          <!-- Input for Full Name -->
+          <div class="px-2 mb-4">
+            <label for="first_name" class="block text-gray-700 font-roboto text-base font-medium">First Name</label>
+            <input type="text" id="first_name" name="first_name" required class="w-[16rem] px-4 py-2 border rounded-lg focus:ring focus:ring-indigo-200 focus:outline-none mt-2" placeholder="First Name">
+          </div>
+          <!-- Input for Username -->
+          <div class="px-2 mb-4">
+            <label for="user_name" class="block text-gray-700 font-roboto text-base font-medium">User Name</label>
+            <input type="text" id="user_name" name="user_name" required class="w-[16rem] px-4 py-2 border rounded-lg focus:ring focus:ring-indigo-200 focus:outline-none mt-2" placeholder="User Name">
+          </div>
+         </div>
+       <div class="md:flex">
+        <!-- Input for Email -->
+        <div class="px-2 mb-4">
+          <label for="email" class="block text-gray-700 font-roboto text-base font-medium">Email ID</label>
+          <input type="email" id="email" name="email" required class="w-[16rem] px-4 py-2 border rounded-lg focus:ring focus:ring-indigo-200 focus:outline-none mt-2" placeholder="example@gmail.com">
+        </div>
+        <!-- Input for Phone Number -->
+        <div class="px-2 mb-4">
+          <label for="mobile" class="block text-gray-700 font-roboto text-base font-medium">Mobile No</label>
+          <div class="flex rounded-lg border focus-within:ring focus-within:ring-indigo-200 focus-within:outline-none mt-2">
+              <span class="flex items-center bg-gray-100 border-r px-4 py-2 rounded-l-lg">
+                  <img src="icons/flag.png" alt="Country flag" class="w-4 h-4">
+                  <p class="me-2">+91</p>
+              </span>
+              <input type="text" id="mobile" name="mobile" required class="w-[11rem] px-4 py-2 focus:outline-none rounded-r-lg" placeholder="Mobile No">
+          </div>
+        </div>
+       </div>
+       <div class="md:flex">
+                <!-- Input for Password -->
+                <div class="px-2 mb-4">
+                  <div class="max-w-sm">
+                    <label for="Password" class="block text-gray-700 font-roboto text-base font-medium">Password</label>
+                    <div class="relative">
+                      <input id="Password" type="password" required class="w-[16rem] px-4 py-2 border rounded-lg focus:ring focus:ring-indigo-200 focus:outline-none mt-2" placeholder="Enter password">
+                      <button type="button" data-hs-toggle-password='{"target": "#hs-toggle-password"}' 
+                          class="mt-2 absolute inset-y-0 end-0 flex items-center z-20 px-3 cursor-pointer text-gray-400 rounded-e-md focus:outline-none focus:text-blue-600 dark:text-neutral-600 dark:focus:text-blue-500">
+                        <svg class="shrink-0 size-3.5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path class="hs-password-active:hidden" d="M9.88 9.88a3 3 0 1 0 4.24 4.24"></path>
+                          <path class="hs-password-active:hidden" d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"></path>
+                          <path class="hs-password-active:hidden" d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"></path>
+                          <line class="hs-password-active:hidden" x1="2" x2="22" y1="2" y2="22"></line>
+                          <path class="hidden hs-password-active:block" d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                          <circle class="hidden hs-password-active:block" cx="12" cy="12" r="3"></circle>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+        
+                </div>
+                <!-- Input for Confirm Password -->
+                <div class="px-2 mb-4">
+                  <div class="max-w-sm">
+                    <label for="Password" class="block text-gray-700 font-roboto text-base font-medium">Confirm Password</label>
+                    <div class="relative">
+                      <input id="Password" type="password" required class="w-[16rem] px-4 py-2 border rounded-lg focus:ring focus:ring-indigo-200 focus:outline-none mt-2" placeholder="Confirm password">
+                      <button type="button" data-hs-toggle-password='{"target": "#hs-toggle-password"}' 
+                          class="mt-2 absolute inset-y-0 end-0 flex items-center z-20 px-3 cursor-pointer text-gray-400 rounded-e-md focus:outline-none focus:text-blue-600 dark:text-neutral-600 dark:focus:text-blue-500">
+                        <svg class="shrink-0 size-3.5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path class="hs-password-active:hidden" d="M9.88 9.88a3 3 0 1 0 4.24 4.24"></path>
+                          <path class="hs-password-active:hidden" d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"></path>
+                          <path class="hs-password-active:hidden" d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"></path>
+                          <line class="hs-password-active:hidden" x1="2" x2="22" y1="2" y2="22"></line>
+                          <path class="hidden hs-password-active:block" d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                          <circle class="hidden hs-password-active:block" cx="12" cy="12" r="3"></circle>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+       </div>
+      </div>
+      <div class="md:flex">
+              <!-- Gender selection -->
+      <div class="mb-4">
+        <label class="block text-gray-700 font-roboto text-base font-medium">Gender</label>
+        <div class="flex space-x-4 mt-2">
+          <label class="flex items-center space-x-2 cursor-pointer block text-gray-700 font-roboto text-base font-medium">
+            <input type="radio" name="gender">
+            <span>Male</span>
+          </label>
+          <label class="flex items-center space-x-2 cursor-pointer block text-gray-700 font-roboto text-base font-medium">
+            <input type="radio" name="gender">
+            <span>Female</span>
+          </label>
+          <label class="flex items-center space-x-2 cursor-pointer block text-gray-700 font-roboto text-base font-medium">
+            <input type="radio" name="gender">
+            <span>Others</span>
+          </label>
+      </div>         
+      </div>
+      </div>
+      <div class="flex items-start">
+        <input id="terms" type="checkbox" required class="w-4 h-4 text-blue-600 bg-gray-100 rounded focus:ring focus:ring-blue-500">
+        <label for="terms" class="ml-2 text-sm font-roboto text-gray-600">I Accept the</label>
+        <a href="#" class="text-blue-600 font-medium ml-1 text-sm">Terms and Conditions</a>
+    </div> 
+      <!-- Submit button -->
+      <div>
+        <button type="submit" class="mt-8 w-full bg-[#ffa500] text-white py-2 rounded shadow ">Register</button>
+      </div>
+      <div>
+        <h2 class="text-center mt-4">
+            <span class="text-gray-500 font-roboto font-medium">Already Have an account?</span>
+            <a href="../login.html" class="text-[#ffa500] font-roboto font-medium ml-1">Login</a>
+        </h2>
+    </div>
+    </form>
+  </div>
+</body>
+</html>

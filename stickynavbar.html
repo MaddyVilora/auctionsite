@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Sticky Navbar</title>
+</head>
+<body class="font-sans">
+  <!-- Sticky navbar -->
+  <nav class="bg-white border-b sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center lg:justify-center lg:space-x-8">
+      <!-- Types -->
+      <div class="flex items-center space-x-2 ml-5 lg:ml-0">
+        <label for="cars" class="text-sm md:text-md lg:text-lg font-medium">Category</label>
+        <select name="cars" id="cars" class="border rounded-md p-2 text-sm md:text-md lg:text-lg">
+          <option value="Type">Type</option>
+          <option value="Cars">Cars</option>
+          <option value="Bike">Bike</option>
+          <option value="Watch">Watch</option>
+          <option value="Jewelry">Jewelry</option>
+          <option value="Coin">Coin</option>
+        </select>
+      </div>
+  
+      <!-- Counts -->
+      <div class="flex items-center space-x-2 ml-4 mr-5 lg:mr-0"> <!-- Added ml-4 for spacing -->
+        <label for="count" class="text-sm md:text-md lg:text-lg font-medium">Limit</label>
+        <select
+          name="count"
+          id="count"
+          class="border rounded-md p-2 text-sm md:text-md lg:text-lg">
+          <option value="9">9</option>
+          <option value="12">12</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+        </select>
+      </div>
+    </div>
+  </nav>
+</body>
+</html>

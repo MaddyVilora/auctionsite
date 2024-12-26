@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>User Dashboard</title>
+  <script>
+    // for toogle button 
+
+    function toggleSidebar() {
+                const sidebar = document.querySelector('#sidebar');
+                // Toggle the sidebar's transform property
+                sidebar.classList.toggle('-translate-x-full'); 
+            }
+      </script>
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <!-- Fixed navbar -->
+
+    <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-800 w-full fixed top-0 z-[1000]">
+      <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
+          <a href="#" class="flex items-center">
+              <img src="../icons/bid-icon.png" class="h-6 mr-3 sm:h-9" alt="Landwind Logo">
+              <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-[#ffa500] font-extrabold">AUCTION</span>
+          </a>
+          <div class="flex items-center lg:order-2">
+              <div class="hidden mt-2 mr-4 sm:inline-block">
+                  <span></span>
+              </div>
+              <!-- login button  -->
+              <a href="../registration.html"
+                  class="text-white bg-[#ffa500] hover:bg-[#ffa500] focus:ring-4 focus:ring-[#ffa500] font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-[#ffa500] dark:hover:bg-[#ffa500] focus:outline-none dark:focus:ring-[#ffa500]">
+                  Login
+              </a>
+    
+    
+              <!-- user dashboard  -->
+              <a href="user-dash/dashboard.html" class="inline-flex px-4 py-1 mb-2 me-10 hidden">
+                <img src="../icons/user-img.png" class="w-8 h-8 cursor-pointer" alt="">
+            </a>
+    
+    
+    
+              <button type="button" onclick="toggleBtn()"
+                  class="inline-flex items-center p-2 ml-1 text-sm text-[#ffa500] rounded-lg lg:hidden hover:bg-[#ffa500] focus:outline-none focus:ring-2 focus:ring-[#ffa500] dark:text-[#ffa500] dark:hover:bg-white dark:focus:ring-white" aria-expanded="false">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd"
+                          d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                          clip-rule="evenodd"></path>
+                  </svg>
+              </button>
+          </div>
+          <div class="items-center hidden justify-between w-full lg:flex lg:w-auto lg:order-1" id="opensidebar">
+              <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                  <li>
+                      <a href="../index.html"
+                          class="block py-2 pl-3 pr-4 text-white bg-[#ffa500] rounded lg:bg-transparent lg:[#ffa500] lg:p-0 dark:text-white"
+                          aria-current="page">Home</a>
+                  </li>
+                  <li>
+                      <a href="#"
+                          class="block py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-[#ffa500] lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-[#ffa500] dark:hover:text-white lg:dark:hover:bg-transparent">Bidding</a>
+                  </li>
+                  <li>
+                      <a href="#"
+                          class="block py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-[#ffa500] lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-[#ffa500] dark:hover:text-white lg:dark:hover:bg-transparent">Seller</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+    </nav>
+  
+  <div id="sidebar" class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg
+  transform -translate-x-full transition-transform z-[1000] sm:hidden">
+      
+      <div class="flex items-center p-5">
+          <a href="#"><img class="w-9 rounded-full" src="../icons/bid.png" alt="Logo"></a>
+          <h2 class="font-extrabold font-roboto text-2xl text-[#ffa500]">AUCTION</h2>
+      </div>
+      <ul class="p-4 space-y-4">
+          <li>
+              <a href="../index.html" class="block text-gray-600 hover:text-[#ffa500] font-roboto">Home</a>
+          </li>
+          <li>
+              <a href="#" class="block text-gray-600 hover:text-[#ffa500] font-roboto">About</a>
+              <li>
+                  <a href="#" class="block text-gray-600 hover:text-[#ffa500] font-roboto">Bidding</a>
+              </li>
+              <li>
+                  <a href="#" class="block text-gray-600 hover:text-[#ffa500] font-roboto">Seller</a>
+              </li>
+              <li>                            
+                  <a href="../login.html" 
+                  class="block text-gray-600 hover:text-[#ffa500] font-roboto inline-flex">
+                  Login
+              </a>
+
+              </li>
+          </li>
+      </ul>
+  </div>
+  <!-- Container -->
+  <div class="flex flex-col lg:flex-row lg:space-x-6 p-6 mt-20">
+
+    <!-- Sidebar -->
+    <aside class="bg-white w-full lg:w-1/4 rounded-lg shadow-md p-6 mb-6 lg:mb-0">
+        <div class="text-center">
+          <img src="../icons/user-img.png" alt="User Avatar" class="rounded-full mx-auto w-24 h-24">
+          <h3 class="text-xl font-semibold mt-4">John Doe</h3>
+          <p class="text-gray-600">johndoe@gmail.com</p>
+        </div>
+        <nav class="mt-6 space-y-4">
+          <a href="dashboard.html" class="flex items-center text-gray-700 hover:text-[#ffa500] transition">
+            <span class="material-icons mr-2"></span> Dashboard
+          </a>
+          <a href="profile.html" class="flex items-center text-gray-700 hover:text-[#ffa500] transition">
+            <span class="material-icons mr-2"></span> Personal Profile
+          </a>
+          <!-- <a href="my-bids.html" class="flex items-center text-gray-700 hover:text-[#ffa500] transition">
+            <span class="material-icons mr-2"></span> My Bids
+          </a> -->
+          <a href="winning-bids.html" class="flex items-center text-gray-700 hover:text-[#ffa500] transition">
+            <span class="material-icons mr-2"></span> Winning Bids
+          </a>
+          <!-- <a href="alerts.html" class="flex items-center text-gray-700 hover:text-[#ffa500] transition">
+            <span class="material-icons mr-2"></span> My Alerts
+          </a> -->
+          <a href="favorites.html" class="flex items-center text-gray-700 hover:text-[#ffa500] transition">
+            <span class="material-icons mr-2"></span> My Favorites
+          </a>
+          <a href="../index.html" class="flex items-center text-gray-700 hover:text-[#ffa500] transition">
+            <span class="material-icons mr-2"></span> Log Out
+          </a>
+        </nav>
+      </aside>
+      
+
+    <!-- Main Content -->
+    <main class="w-full lg:w-3/4">
+         
+
+      <div class="grid grid-cols-1 lg:grid-cols-1 sm:grid-cols-2 gap-6">
+        <!-- Card 1 -->
+        <div class="bg-white shadow-xl rounded-xl p-8 lg:flex flex-col">
+          <div class="flex justify-between">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 ">Personal Details</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+            </svg>
+          </div>
+         
+          
+          <div>
+            <Span>Name:</Span>
+            <Span>Dinesh</Span>
+          </div>
+          <div>
+            <Span>Date of Birth:</Span>
+            <Span>15-03-1974</Span>
+          </div>
+          <div>
+            <Span>Address:</Span>
+            <Span>8198 Fieldstone Dr.La Crosse, WI 54601</Span>
+          </div>
+
+          
+        </div> 
+
+        <div class="bg-white shadow-xl rounded-xl p-8">
+          <div class="flex justify-between">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 ">Email Address</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+            </svg>
+          </div>
+          
+          <div>
+            <Span>Email:</Span>
+            <Span>albert349@gmail.com</Span>
+          </div>
+        </div> 
+        <div class="bg-white shadow-xl rounded-xl p-8">
+          <div class="flex justify-between">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 ">Phone</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+            </svg>
+          </div>
+          
+          <div>
+            <Span>Phone:</Span>
+            <Span> +91 9988776789</Span>
+          </div>
+        </div> 
+        <div class="bg-white shadow-xl rounded-xl p-8">
+          <div class="flex justify-between">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 ">Account settings</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+            </svg>
+          </div>
+         
+          <div>
+            <Span>Language:</Span>
+            <Span>English</Span>
+          </div>
+          <div>
+            <Span>Status:</Span>
+            <Span>Active</Span>
+          </div>
+        </div> 
+
+       
+      </div>
+    </main>
+  </div>
+  <!-- footer -->
+  <footer class=" bg-gray-800 shadow-xl w-full p-4">
+    
+    
+    <ul class="hidden sm:flex flex-wrap justify-center space-x-8 text-white font-roboto text-sm sm:text-base">
+        <li><a href="#" class="hover:text-[#ffa500]">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-[#ffa500]">Enquire</a></li>
+        <li><a href="#" class="hover:text-[#ffa500]">Contact Us</a></li>
+        <li><a href="#" class="hover:text-[#ffa500]">Products</a></li>
+        <li><a href="#" class="hover:text-[#ffa500]">Bidding</a></li>
+    </ul>
+  
+    <ul class="lg:hidden grid grid-cols-3 text-white text-xs place-items-center gap-2 space-x-8">
+     <div> <li><a href="#" class="hover:text-[#ffa500]">Privacy Policy</a></li>
+         <li><a href="#" class="hover:text-[#ffa500]">Pricing Details</a></li>
+     </div>
+     <div><li><a href="#" class="hover:text-[#ffa500]">Enquire</a></li>
+         <li><a href="#" class="hover:text-[#ffa500]">Contact Us</a></li>
+     </div>
+     <div><li><a href="#" class="hover:text-[#ffa500]">Products</a></li>
+         <li><a href="#" class="hover:text-[#ffa500]">Bidding</a></li>
+     </div> 
+  </ul> 
+    <div class="flex justify-center mt-4 text-gray-200 text-xs sm:text-sm">
+        <p class="font-roboto font-bold">Designed and Devloped by Vilora Technologies &copy; 2024 </p>
+    </div>
+  </footer>
+  
+</body>
+</html>

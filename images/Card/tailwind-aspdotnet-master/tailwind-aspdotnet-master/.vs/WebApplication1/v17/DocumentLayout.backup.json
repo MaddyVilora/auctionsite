@@ -1,0 +1,143 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\Maddy\\Auction\\images\\Card\\tailwind-aspdotnet-master\\tailwind-aspdotnet-master\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{589562B0-9DBA-4C28-B8E4-EAF7AEAA663A}|WebApplication1\\WebApplication1.csproj|c:\\users\\user\\desktop\\maddy\\auction\\images\\card\\tailwind-aspdotnet-master\\tailwind-aspdotnet-master\\webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{589562B0-9DBA-4C28-B8E4-EAF7AEAA663A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{589562B0-9DBA-4C28-B8E4-EAF7AEAA663A}|WebApplication1\\WebApplication1.csproj|c:\\users\\user\\desktop\\maddy\\auction\\images\\card\\tailwind-aspdotnet-master\\tailwind-aspdotnet-master\\webapplication1\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{589562B0-9DBA-4C28-B8E4-EAF7AEAA663A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{589562B0-9DBA-4C28-B8E4-EAF7AEAA663A}|WebApplication1\\WebApplication1.csproj|c:\\users\\user\\desktop\\maddy\\auction\\images\\card\\tailwind-aspdotnet-master\\tailwind-aspdotnet-master\\webapplication1\\wwwroot\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{589562B0-9DBA-4C28-B8E4-EAF7AEAA663A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\wwwroot\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{589562B0-9DBA-4C28-B8E4-EAF7AEAA663A}|WebApplication1\\WebApplication1.csproj|c:\\users\\user\\desktop\\maddy\\auction\\images\\card\\tailwind-aspdotnet-master\\tailwind-aspdotnet-master\\webapplication1\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{589562B0-9DBA-4C28-B8E4-EAF7AEAA663A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{589562B0-9DBA-4C28-B8E4-EAF7AEAA663A}|WebApplication1\\WebApplication1.csproj|c:\\users\\user\\desktop\\maddy\\auction\\images\\card\\tailwind-aspdotnet-master\\tailwind-aspdotnet-master\\webapplication1\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{589562B0-9DBA-4C28-B8E4-EAF7AEAA663A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{589562B0-9DBA-4C28-B8E4-EAF7AEAA663A}|WebApplication1\\WebApplication1.csproj|c:\\users\\user\\desktop\\maddy\\auction\\images\\card\\tailwind-aspdotnet-master\\tailwind-aspdotnet-master\\webapplication1\\tailwind.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{589562B0-9DBA-4C28-B8E4-EAF7AEAA663A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\tailwind.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{589562B0-9DBA-4C28-B8E4-EAF7AEAA663A}|WebApplication1\\WebApplication1.csproj|c:\\users\\user\\desktop\\maddy\\auction\\images\\card\\tailwind-aspdotnet-master\\tailwind-aspdotnet-master\\webapplication1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{589562B0-9DBA-4C28-B8E4-EAF7AEAA663A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml.css",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Maddy\\Auction\\images\\Card\\tailwind-aspdotnet-master\\tailwind-aspdotnet-master\\WebApplication1\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Shared\\_Layout.cshtml.css",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Maddy\\Auction\\images\\Card\\tailwind-aspdotnet-master\\tailwind-aspdotnet-master\\WebApplication1\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeToolTip": "WebApplication1\\Views\\Shared\\_Layout.cshtml.css",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-07T12:23:49.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Maddy\\Auction\\images\\Card\\tailwind-aspdotnet-master\\tailwind-aspdotnet-master\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Maddy\\Auction\\images\\Card\\tailwind-aspdotnet-master\\tailwind-aspdotnet-master\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T12:23:42.763Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Maddy\\Auction\\images\\Card\\tailwind-aspdotnet-master\\tailwind-aspdotnet-master\\WebApplication1\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "WebApplication1\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Maddy\\Auction\\images\\Card\\tailwind-aspdotnet-master\\tailwind-aspdotnet-master\\WebApplication1\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "WebApplication1\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-07T12:23:03.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "styles.css",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Maddy\\Auction\\images\\Card\\tailwind-aspdotnet-master\\tailwind-aspdotnet-master\\WebApplication1\\wwwroot\\css\\styles.css",
+              "RelativeDocumentMoniker": "WebApplication1\\wwwroot\\css\\styles.css",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Maddy\\Auction\\images\\Card\\tailwind-aspdotnet-master\\tailwind-aspdotnet-master\\WebApplication1\\wwwroot\\css\\styles.css",
+              "RelativeToolTip": "WebApplication1\\wwwroot\\css\\styles.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-07T12:22:54.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Maddy\\Auction\\images\\Card\\tailwind-aspdotnet-master\\tailwind-aspdotnet-master\\WebApplication1\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "WebApplication1\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Maddy\\Auction\\images\\Card\\tailwind-aspdotnet-master\\tailwind-aspdotnet-master\\WebApplication1\\Properties\\launchSettings.json",
+              "RelativeToolTip": "WebApplication1\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-07T12:22:40.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "tailwind.config.js",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Maddy\\Auction\\images\\Card\\tailwind-aspdotnet-master\\tailwind-aspdotnet-master\\WebApplication1\\tailwind.config.js",
+              "RelativeDocumentMoniker": "WebApplication1\\tailwind.config.js",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Maddy\\Auction\\images\\Card\\tailwind-aspdotnet-master\\tailwind-aspdotnet-master\\WebApplication1\\tailwind.config.js",
+              "RelativeToolTip": "WebApplication1\\tailwind.config.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-07T12:22:30.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Maddy\\Auction\\images\\Card\\tailwind-aspdotnet-master\\tailwind-aspdotnet-master\\WebApplication1\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Maddy\\Auction\\images\\Card\\tailwind-aspdotnet-master\\tailwind-aspdotnet-master\\WebApplication1\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T12:20:24.224Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

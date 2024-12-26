@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Smooth transition for the sidebar */
+        .transition-transform {
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="container">
+    <nav class="flex flex-wrap items-center justify-between bg-white shadow-lg p-4 w-full fixed top-0">
+        <!-- Logo Section -->
+        <div class="flex items-center space-x-4">
+            <a href="#"><img class="w-9 rounded-full" src="icons/bid.png" alt="Logo"></a>
+            <h2 class="font-extrabold font-roboto text-2xl text-[#ffa500]">AUCTION</h2>
+        </div> 
+
+        <!-- Navigation Links -->
+        <ul id="list" class="hidden sm:flex space-x-8 font-roboto text-base font-medium text-lg ">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Bidding</a></li>
+            <li><a href="#">Seller</a></li>
+        </ul> 
+        
+        <!-- Login Button -->
+        <div class="hidden sm:block mt-2">
+            <button class="rounded-full font-roboto bg-[#ffa500] font-bold text-white mb-2 me-10 w-16 h-10 px-auto py-auto font-roboto">Login</button> 
+        </div>
+
+        <!-- Toggle Button -->
+        <div class="sm:hidden flex items-center space-x-4" id="toggle" onclick="toggleSidebar();"  >
+            <img class="w-7 h-6 cursor-pointer" src="icons/bars-icon.svg" alt="Toggle">
+        </div>
+         
+    </nav>
+     
+     <div id="sidebar" class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform">
+        
+        <div class="p-5 border-b">
+            <h2 class="text-xl font-bold text-gray-700 font-roboto">Menu</h2>
+        </div>
+        <ul class="p-4 space-y-4">
+            <li>
+                <a href="#" class="block text-gray-600 hover:text-[#ffa500] font-roboto">Home</a>
+            </li>
+            <li>
+                <a href="#" class="block text-gray-600 hover:text-[#ffa500] font-roboto">About</a>
+                <li>
+                    <a href="#" class="block text-gray-600 hover:text-[#ffa500] font-roboto">Bidding</a>
+                </li>
+                <li>
+                    <a href="#" class="block text-gray-600 hover:text-[#ffa500] font-roboto">Seller</a>
+                </li>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.querySelector('#sidebar');
+            // Toggle the sidebar's transform property
+            sidebar.classList.toggle('-translate-x-full'); 
+        }
+        
+    </script>
+</body>
+</html>

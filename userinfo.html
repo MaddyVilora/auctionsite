@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Info</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="container mx-auto place-items-center mt-20">
+            <!-- logo picture  -->
+            <div class="max-w-sm bg-white rounded-full shadow-xl overflow-hidden">
+                <div class="justify-center text-center rounded-full">
+                    <img src="icons/user-img.png" class="h-16 w-16 justify-center text-center items-center rounded-full" alt="">
+                </div>
+            </div>
+            <!-- details container  -->
+            <div class="w-100 border-gray-200 shadow-xl mt-12 px-4 py-4">
+                <!-- Form Section -->
+                <div class="space-y-6">
+                    <!-- Username -->
+                    <div class="flex items-center">
+                        <label for="username" class="w-32 text-base font-medium text-gray-700 text-right pr-4">Username:</label>
+                        <input type="text" placeholder="Username" id="username" class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-indigo-200 focus:outline-none text-sm">
+                        <i class="fa fa-pencil ml-5 cursor-pointer"></i>
+                    </div>
+                    <!-- Mobile Number -->
+                    <div class="flex items-center">
+                        <label for="mobileno" class="w-32 whitespace-nowrap text-base font-medium text-gray-700 text-right pr-4">Mobile No:</label>
+                        <input type="text" placeholder="Mobile Number" id="mobileno" class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-indigo-200 focus:outline-none text-sm">
+                                                <i class="fa fa-pencil ml-5 cursor-pointer"></i>
+                    </div>
+                    <!-- Email -->
+                    <div class="flex items-center">
+                        <label for="emailid" class="w-32 whitespace-nowrap text-base font-medium text-gray-700 text-right pr-4">Email Id:</label>
+                        <input type="email" placeholder="Email Id" id="emailid" class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-indigo-200 focus:outline-none text-sm">
+                                                <i class="fa fa-pencil ml-5 cursor-pointer"></i>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

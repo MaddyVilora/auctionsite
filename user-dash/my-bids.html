@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>User Dashboard</title>
+  <style>
+    .text-pink-500 {
+      color: #f50057;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  </style>
+  <script>
+function startCountdown(id, hoursToAdd, minutesToAdd, secondsToAdd) {
+  const countdownElement = document.getElementById(id);
+  const endTime = new Date();
+  endTime.setHours(endTime.getHours() + hoursToAdd, endTime.getMinutes() + minutesToAdd, endTime.getSeconds() + secondsToAdd);
+
+  function updateCountdown() {
+    const now = new Date();
+    const difference = endTime - now;
+
+    if (difference > 0) {
+      const seconds = Math.floor((difference / 1000) % 60);
+      const minutes = Math.floor((difference / 1000 / 60) % 60);
+      const hours = Math.floor((difference / 1000 / 60 / 60) % 24);
+      const days = Math.floor(difference / 1000 / 60 / 60 / 24);
+      countdownElement.textContent = `${days}d : ${hours}h : ${minutes}m : ${seconds}s`;
+
+    } else {
+      countdownElement.textContent = "Time's up!";
+      clearInterval(interval);
+    }
+  }
+
+  updateCountdown(); // Initialize the countdown immediately
+  const interval = setInterval(updateCountdown, 1000); // Update every second
+}
+
+// Initialize multiple countdowns
+window.onload = function () {
+  startCountdown("countdown1", 9, 10, 38); // First card
+  startCountdown("countdown2", 8, 45, 20); // Second card
+  startCountdown("countdown3", 8, 45, 20); // Second card
+
+};
+    // for toogle button 
+
+    function toggleSidebar() {
+                const sidebar = document.querySelector('#sidebar');
+                // Toggle the sidebar's transform property
+                sidebar.classList.toggle('-translate-x-full'); 
+            }
+
+  // heart icon fill or unfiller
+  const toggleHeart = (event) => {
+  const button = event.currentTarget; // Get the clicked button
+  const filledBtn = button.querySelector(".icon-fill");
+  const unfilledBtn = button.querySelector(".icon-border");
+
+  if (filledBtn.classList.contains("hidden")) {
+    unfilledBtn.classList.add("hidden");
+    filledBtn.classList.remove("hidden");
+  } else {
+    filledBtn.classList.add("hidden");
+    unfilledBtn.classList.remove("hidden");
+  }
+
+  console.log("Toggle success");
+};
+
+  </script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Fixed navbar -->
+
+    <nav class="flex flex-wrap items-center justify-between bg-white shadow-lg p-4 w-full fixed top-0 z-[1000]">
+      <!-- Logo Section -->
+      <div class="flex items-center space-x-4">
+          <a href="#"><img class="w-9 rounded-full" src="../icons/bid.png" alt="Logo"></a>
+          <h2 class="font-extrabold font-roboto text-2xl text-[#ffa500]">AUCTION</h2>
+      </div> 
+
+      <!-- Navigation Links -->
+      <ul id="list" class="hidden sm:flex space-x-8 font-roboto text-base font-medium text-lg ">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Bidding</a></li>
+          <li><a href="#">Seller</a></li>
+      </ul> 
+      
+      <!-- Login Button -->
+      <div class="hidden sm:block mt-2">
+          <a href="../login.html" 
+          class="rounded-full font-roboto bg-[#ffa500] font-bold text-white mb-2 me-10 w-auto h-7 px-4 py-1 inline-flex items-center justify-center text-center">
+          Login
+          <img src="../icons/login-user.png" class="h-5 w-5 ml-2 filter-white" alt="Login Icon">
+      </a>
+      <a href="dashboard.html" class="inline-flex px-4 py-1 mb-2 me-10">
+          <img src="../icons/user-img.png" class="w-8 h-8 cursor-pointer" alt="">
+      </a>
+
+      </div>
+              <div class="sm:hidden flex space-x-4 ml-[22rem]">
+          <a href="dashboard.html" class="block md:hidden object-none">
+            <img class="w-7 h-6 cursor-pointer" src="../icons/user-img.png" alt="User Icon">
+          </a>
+        </div>
+      <!-- Toggle Button -->
+      <div class="sm:hidden flex items-center space-x-4" id="toggle" onclick="toggleSidebar();"  >
+          <img class="w-7 h-6 cursor-pointer" src="../icons/bars-icon.svg" alt="Toggle">
+      </div>
+       
+  </nav>
+  
+  <div id="sidebar" class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg
+  transform -translate-x-full transition-transform z-[1000] sm:hidden">
+      
+      <div class="flex items-center p-5">
+          <a href="#"><img class="w-9 rounded-full" src="../icons/bid.png" alt="Logo"></a>
+          <h2 class="font-extrabold font-roboto text-2xl text-[#ffa500]">AUCTION</h2>
+      </div>
+      <ul class="p-4 space-y-4">
+          <li>
+              <a href="../index.html" class="block text-gray-600 hover:text-[#ffa500] font-roboto">Home</a>
+          </li>
+          <li>
+              <a href="#" class="block text-gray-600 hover:text-[#ffa500] font-roboto">About</a>
+              <li>
+                  <a href="#" class="block text-gray-600 hover:text-[#ffa500] font-roboto">Bidding</a>
+              </li>
+              <li>
+                  <a href="#" class="block text-gray-600 hover:text-[#ffa500] font-roboto">Seller</a>
+              </li>
+              <li>                            
+                  <a href="../login.html" 
+                  class="block text-gray-600 hover:text-[#ffa500] font-roboto inline-flex">
+                  Login
+              </a>
+
+              </li>
+          </li>
+      </ul>
+  </div>
+  <!-- Container -->
+  <div class="flex flex-col lg:flex-row lg:space-x-6 p-6 mt-20">
+
+    <!-- Sidebar -->
+    <aside class="bg-white w-full lg:w-1/4 rounded-lg shadow-md p-6 mb-6 lg:mb-0">
+        <div class="text-center">
+          <img src="../icons/user-img.png" alt="User Avatar" class="rounded-full mx-auto w-24 h-24">
+          <h3 class="text-xl font-semibold mt-4">Ragavan</h3>
+          <p class="text-gray-600">ragavan@gmail.com</p>
+        </div>
+        <nav class="mt-6 space-y-4">
+          <a href="dashboard.html" class="flex items-center text-gray-700 hover:text-[#ffa500] transition">
+            <span class="material-icons mr-2"></span> Dashboard
+          </a>
+          <a href="profile.html" class="flex items-center text-gray-700 hover:text-[#ffa500] transition">
+            <span class="material-icons mr-2"></span> Personal Profile
+          </a>
+          <a href="my-bids.html" class="flex items-center text-gray-700 hover:text-[#ffa500] transition">
+            <span class="material-icons mr-2"></span> My Bids
+          </a>
+          <a href="winning-bids.html" class="flex items-center text-gray-700 hover:text-[#ffa500] transition">
+            <span class="material-icons mr-2"></span> Winning Bids
+          </a>
+          <!-- <a href="alerts.html" class="flex items-center text-gray-700 hover:text-[#ffa500] transition">
+            <span class="material-icons mr-2"></span> My Alerts
+          </a> -->
+          <a href="favorites.html" class="flex items-center text-gray-700 hover:text-[#ffa500] transition">
+            <span class="material-icons mr-2"></span> My Favorites
+          </a>
+          <a href="../index.html" class="flex items-center text-gray-700 hover:text-[#ffa500] transition">
+            <span class="material-icons mr-2"></span> Log Out
+          </a>
+        </nav>
+      </aside>
+      
+
+        <!-- Main Content -->
+        <main class="w-full lg:w-3/4">
+      
+
+          <div class="grid grid-cols-1 lg:grid-cols-1 sm:grid-cols-2 gap-6">
+              
+            <div class="bg-gray-50 shadow-xl rounded-xl p-8">
+              <h2 class="text-2xl font-bold text-gray-900">My Bids</h2>
+            </div> 
+    
+            <!-- Card 1 -->
+             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="relative">
+                  <img src="../images/Card/carone.jpg" alt="Car Image" class="w-full h-48 object-cover">
+                  <button class="absolute top-3 right-3 text-[#ffa500] text-lg" onclick="toggleHeart(event)">
+                    <i class="fa-regular fa-heart icon-border"></i>
+                    <i class="fa-solid fa-heart hidden icon-fill"></i>
+                  </button>
+                </div>
+                <div class="p-4">
+                  <h2 class="text-xl font-semibold text-gray-800">Lamborghini</h2>
+                  <div class="border-t border-gray-200 mt-2 mb-4"></div>
+                  <div class="flex justify-between items-center text-sm">
+                    <div class="flex items-center text-green-500">
+                      <i class="fas fa-gavel mr-1"></i>
+                      <span>Current Bid</span>
+                    </div>
+                    <div class="text-gray-800 font-semibold">₹100.00</div>
+                  </div>
+                  <div class="flex justify-between items-center text-sm mt-2">
+                    <div class="flex items-center text-red-500">
+                      <i class="fas fa-shopping-bag mr-1"></i>
+                      <span>Buy Now</span>
+                    </div>
+                    <div class="text-gray-800 font-semibold">₹500.00</div>
+                  </div>
+                  <div class="flex justify-between items-center text-sm mt-4">
+                    <div class="text-pink-500 text-sm">
+                      <span id="countdown2">Loading...</span>
+                    </div>
+                    <div class="text-green-500 font-semibold">30 Bids</div>
+                  </div>
+                  <button class="mt-4 w-full py-2 bg-[#ffa500] text-white font-semibold rounded-lg shadow-md hover:shadow-lg">
+                    Submit A Bid
+                  </button>
+                </div>
+              </div>
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="relative">
+                  <img src="../images/Card/carone.jpg" alt="Car Image" class="w-full h-48 object-cover">
+                  <button class="absolute top-3 right-3 text-[#ffa500] text-lg" onclick="toggleHeart(event)">
+                    <i class="fa-regular fa-heart icon-border"></i>
+                    <i class="fa-solid fa-heart hidden icon-fill"></i>
+                  </button>
+                </div>
+                <div class="p-4">
+                  <h2 class="text-xl font-semibold text-gray-800">Lamborghini</h2>
+                  <div class="border-t border-gray-200 mt-2 mb-4"></div>
+                  <div class="flex justify-between items-center text-sm">
+                    <div class="flex items-center text-green-500">
+                      <i class="fas fa-gavel mr-1"></i>
+                      <span>Current Bid</span>
+                    </div>
+                    <div class="text-gray-800 font-semibold">₹100.00</div>
+                  </div>
+                  <div class="flex justify-between items-center text-sm mt-2">
+                    <div class="flex items-center text-red-500">
+                      <i class="fas fa-shopping-bag mr-1"></i>
+                      <span>Buy Now</span>
+                    </div>
+                    <div class="text-gray-800 font-semibold">₹500.00</div>
+                  </div>
+                  <div class="flex justify-between items-center text-sm mt-4">
+                    <div class="text-pink-500 text-sm">
+                      <span id="countdown2">Loading...</span>
+                    </div>
+                    <div class="text-green-500 font-semibold">30 Bids</div>
+                  </div>
+                  <button class="mt-4 w-full py-2 bg-[#ffa500] text-white font-semibold rounded-lg shadow-md hover:shadow-lg">
+                    Submit A Bid
+                  </button>
+                </div>
+              </div>
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="relative">
+                  <img src="../images/Card/carone.jpg" alt="Car Image" class="w-full h-48 object-cover">
+                  <button class="absolute top-3 right-3 text-[#ffa500] text-lg" onclick="toggleHeart(event)">
+                    <i class="fa-regular fa-heart icon-border"></i>
+                    <i class="fa-solid fa-heart hidden icon-fill"></i>
+                  </button>
+                </div>
+                <div class="p-4">
+                  <h2 class="text-xl font-semibold text-gray-800">Lamborghini</h2>
+                  <div class="border-t border-gray-200 mt-2 mb-4"></div>
+                  <div class="flex justify-between items-center text-sm">
+                    <div class="flex items-center text-green-500">
+                      <i class="fas fa-gavel mr-1"></i>
+                      <span>Current Bid</span>
+                    </div>
+                    <div class="text-gray-800 font-semibold">₹100.00</div>
+                  </div>
+                  <div class="flex justify-between items-center text-sm mt-2">
+                    <div class="flex items-center text-red-500">
+                      <i class="fas fa-shopping-bag mr-1"></i>
+                      <span>Buy Now</span>
+                    </div>
+                    <div class="text-gray-800 font-semibold">₹500.00</div>
+                  </div>
+                  <div class="flex justify-between items-center text-sm mt-4">
+                    <div class="text-pink-500 text-sm">
+                      <span id="countdown2">Loading...</span>
+                    </div>
+                    <div class="text-green-500 font-semibold">30 Bids</div>
+                  </div>
+                  <button class="mt-4 w-full py-2 bg-[#ffa500] text-white font-semibold rounded-lg shadow-md hover:shadow-lg">
+                    Submit A Bid
+                  </button>
+                </div>
+              </div>
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="relative">
+                  <img src="../images/Card/carone.jpg" alt="Car Image" class="w-full h-48 object-cover">
+                  <button class="absolute top-3 right-3 text-[#ffa500] text-lg" onclick="toggleHeart(event)">
+                    <i class="fa-regular fa-heart icon-border"></i>
+                    <i class="fa-solid fa-heart hidden icon-fill"></i>
+                  </button>
+                </div>
+                <div class="p-4">
+                  <h2 class="text-xl font-semibold text-gray-800">Lamborghini</h2>
+                  <div class="border-t border-gray-200 mt-2 mb-4"></div>
+                  <div class="flex justify-between items-center text-sm">
+                    <div class="flex items-center text-green-500">
+                      <i class="fas fa-gavel mr-1"></i>
+                      <span>Current Bid</span>
+                    </div>
+                    <div class="text-gray-800 font-semibold">₹100.00</div>
+                  </div>
+                  <div class="flex justify-between items-center text-sm mt-2">
+                    <div class="flex items-center text-red-500">
+                      <i class="fas fa-shopping-bag mr-1"></i>
+                      <span>Buy Now</span>
+                    </div>
+                    <div class="text-gray-800 font-semibold">₹500.00</div>
+                  </div>
+                  <div class="flex justify-between items-center text-sm mt-4">
+                    <div class="text-pink-500 text-sm">
+                      <span id="countdown2">Loading...</span>
+                    </div>
+                    <div class="text-green-500 font-semibold">30 Bids</div>
+                  </div>
+                  <button class="mt-4 w-full py-2 bg-[#ffa500] text-white font-semibold rounded-lg shadow-md hover:shadow-lg">
+                    Submit A Bid
+                  </button>
+                </div>
+              </div>
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="relative">
+                  <img src="../images/Card/carone.jpg" alt="Car Image" class="w-full h-48 object-cover">
+                  <button class="absolute top-3 right-3 text-[#ffa500] text-lg" onclick="toggleHeart(event)">
+                    <i class="fa-regular fa-heart icon-border"></i>
+                    <i class="fa-solid fa-heart hidden icon-fill"></i>
+                  </button>
+                </div>
+                <div class="p-4">
+                  <h2 class="text-xl font-semibold text-gray-800">Lamborghini</h2>
+                  <div class="border-t border-gray-200 mt-2 mb-4"></div>
+                  <div class="flex justify-between items-center text-sm">
+                    <div class="flex items-center text-green-500">
+                      <i class="fas fa-gavel mr-1"></i>
+                      <span>Current Bid</span>
+                    </div>
+                    <div class="text-gray-800 font-semibold">₹100.00</div>
+                  </div>
+                  <div class="flex justify-between items-center text-sm mt-2">
+                    <div class="flex items-center text-red-500">
+                      <i class="fas fa-shopping-bag mr-1"></i>
+                      <span>Buy Now</span>
+                    </div>
+                    <div class="text-gray-800 font-semibold">₹500.00</div>
+                  </div>
+                  <div class="flex justify-between items-center text-sm mt-4">
+                    <div class="text-pink-500 text-sm">
+                      <span id="countdown2">Loading...</span>
+                    </div>
+                    <div class="text-green-500 font-semibold">30 Bids</div>
+                  </div>
+                  <button class="mt-4 w-full py-2 bg-[#ffa500] text-white font-semibold rounded-lg shadow-md hover:shadow-lg">
+                    Submit A Bid
+                  </button>
+                </div>
+              </div>
+
+              <!-- card 6 -->
+
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="relative">
+                  <img src="../images/Card/carone.jpg" alt="Car Image" class="w-full h-48 object-cover">
+                  <button class="absolute top-3 right-3 text-[#ffa500] text-lg" onclick="toggleHeart(event)">
+                    <i class="fa-regular fa-heart icon-border"></i>
+                    <i class="fa-solid fa-heart hidden icon-fill"></i>
+                  </button>
+                </div>
+                <div class="p-4">
+                  <h2 class="text-xl font-semibold text-gray-800">Lamborghini</h2>
+                  <div class="border-t border-gray-200 mt-2 mb-4"></div>
+                  <div class="flex justify-between items-center text-sm">
+                    <div class="flex items-center text-green-500">
+                      <i class="fas fa-gavel mr-1"></i>
+                      <span>Current Bid</span>
+                    </div>
+                    <div class="text-gray-800 font-semibold">₹100.00</div>
+                  </div>
+                  <div class="flex justify-between items-center text-sm mt-2">
+                    <div class="flex items-center text-red-500">
+                      <i class="fas fa-shopping-bag mr-1"></i>
+                      <span>Buy Now</span>
+                    </div>
+                    <div class="text-gray-800 font-semibold">₹500.00</div>
+                  </div>
+                  <div class="flex justify-between items-center text-sm mt-4">
+                    <div class="text-pink-500 text-sm">
+                      <span id="countdown2">Loading...</span>
+                    </div>
+                    <div class="text-green-500 font-semibold">30 Bids</div>
+                  </div>
+                  <button class="mt-4 w-full py-2 bg-[#ffa500] text-white font-semibold rounded-lg shadow-md hover:shadow-lg">
+                    Submit A Bid
+                  </button>
+                </div>
+              </div>
+    
+             
+           
+          </div>
+        </main>
+  </div>
+  <!-- footer -->
+  <footer class=" bg-gray-800 shadow-xl w-full p-4">
+    
+    
+    <ul class="hidden sm:flex flex-wrap justify-center space-x-8 text-white font-roboto text-sm sm:text-base">
+        <li><a href="#" class="hover:text-[#ffa500]">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-[#ffa500]">Pricing</a></li>
+        <li><a href="#" class="hover:text-[#ffa500]">Enquire</a></li>
+        <li><a href="#" class="hover:text-[#ffa500]">Contact Us</a></li>
+        <li><a href="#" class="hover:text-[#ffa500]">Products</a></li>
+        <li><a href="#" class="hover:text-[#ffa500]">Bidding</a></li>
+    </ul>
+  
+    <ul class="lg:hidden grid grid-cols-3 text-white text-xs place-items-center gap-2 space-x-8">
+     <div> <li><a href="#" class="hover:text-[#ffa500]">Privacy Policy</a></li>
+         <li><a href="#" class="hover:text-[#ffa500]">Pricing Details</a></li>
+     </div>
+     <div><li><a href="#" class="hover:text-[#ffa500]">Enquire</a></li>
+         <li><a href="#" class="hover:text-[#ffa500]">Contact Us</a></li>
+     </div>
+     <div><li><a href="#" class="hover:text-[#ffa500]">Products</a></li>
+         <li><a href="#" class="hover:text-[#ffa500]">Bidding</a></li>
+     </div> 
+  </ul> 
+    <div class="flex justify-center mt-4 text-gray-200 text-xs sm:text-sm">
+        <p class="font-roboto font-bold">All rights reserved &copy; 2024 </p>
+    </div>
+  </footer>
+</body>
+</html>
